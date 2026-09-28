@@ -3,211 +3,1910 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI Plus Robotic – Robotics & AI Labs and Classes</title>
-<meta name="description" content="AI Plus Robotic sets up robotics and AI labs in schools and teaches students with hands-on kits and expert mentors.">
+<title>ROBOCLUB | AI Plus Robotic – Build The Future</title>
+<meta name="description" content="AI Plus Robotic & Roboclub builds state-of-the-art robotics & AI labs for schools and provides hands-on STEM education for students ages 6–17.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fffdf3;--surface:#fff;--ink:#111111;--muted:#6a6450;--line:#ece3b8;--dark:#0a0a0a;--coral:#ffc400;--mint:#ffc400;--sun:#ffd83a;--soft:#fff1b8;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0c07;--surface:#1a170a;--ink:#fff8dc;--muted:#b5ad88;--line:#3a3413;--soft:#2a2508}}
-:root[data-theme="dark"]{--bg:#0d0c07;--surface:#1a170a;--ink:#fff8dc;--muted:#b5ad88;--line:#3a3413;--soft:#2a2508}
-html{scroll-padding-top:76px;scroll-behavior:smooth}*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 'Inter',system-ui,sans-serif}
-h1,h2,h3{font-family:'Montserrat','Inter',sans-serif;line-height:1.15;margin:0 0 .5em}
-h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:800}h3{font-size:1.15rem;font-weight:700}
-a{color:inherit}.wrap{max-width:1140px;margin:0 auto;padding:0 22px}section{padding:76px 0}
-.sub{color:var(--muted);max-width:60ch}.center{text-align:center}.center .sub{margin-inline:auto}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--dark);color:#fff;box-shadow:0 4px 18px rgba(0,0,0,.25)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font:800 1.2rem 'Montserrat';text-decoration:none;display:flex;align-items:center;gap:9px;color:#fff}.logo i{color:var(--mint);font-style:normal}
-.links{display:flex;gap:26px;align-items:center}.links a{text-decoration:none;font-weight:500;color:#eee8cf}.links a:hover{color:#fff}
-.btn{display:inline-block;background:var(--coral);color:#111;border:0;border-radius:999px;padding:12px 26px;font:700 1rem 'Inter';cursor:pointer;text-decoration:none;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.icon-btn{background:none;border:1px solid #5a4d12;border-radius:50%;width:38px;height:38px;cursor:pointer;color:#fff}
-:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
-.hero{position:relative;min-height:min(86vh,720px);display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:var(--dark)}
-.hero>svg{position:absolute;inset:0;width:100%;height:100%}
-.hero .in{position:relative;padding:40px 22px}
-.hero h1{font:800 clamp(2.4rem,7vw,5rem)/1.05 'Montserrat';margin:0 0 .4em;letter-spacing:-.01em}
-.hero p{max-width:52ch;margin:0 auto 28px;color:#eee8cf;font-size:1.15rem}
-.pill{display:inline-block;border:2px solid #fff;color:#fff;border-radius:999px;padding:14px 34px;font:700 1.1rem 'Montserrat';text-decoration:none;transition:background .2s,color .2s}
-.pill:hover{background:#fff;color:var(--dark)}
-.pulse{animation:pl 2.6s ease-in-out infinite}@keyframes pl{50%{opacity:.3}}
-.head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px}.head h2{margin:0}
-.filters{display:flex;gap:10px}.f{background:var(--soft);color:var(--ink);border:0;border-radius:999px;padding:10px 22px;font:600 .95rem 'Inter';cursor:pointer}
-.f[aria-pressed="true"]{background:var(--coral);color:#111}
-.progs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
-.pc{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;color:#fff;background:#111111}
-.pc svg{position:absolute;inset:0;width:100%;height:100%}
-.pc .t{position:absolute;inset:auto 0 0 0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.78))}
-.pc small{opacity:.85;display:block}.pc b{font:700 1.1rem 'Montserrat'}
-.pc p{position:absolute;inset:0;margin:0;padding:22px;background:rgba(10,10,10,.93);opacity:0;transition:opacity .25s;font-size:.95rem}
-.pc:hover p,.pc:focus-within p{opacity:1}
-.pc a{position:absolute;inset:0;z-index:2}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:40px}
-.col{border-top:3px solid var(--line);padding-top:16px}.col em{font:800 1rem 'Montserrat';font-style:normal;color:#111;background:var(--coral);border-radius:8px;padding:2px 10px}.col h3{margin:10px 0 6px}.col p{color:var(--muted);margin:0}
-.callout{margin:48px auto 0;max-width:760px;background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:34px;text-align:center}
-.callout h3{font-size:1.6rem}.callout h3 span{box-shadow:inset 0 -.4em 0 var(--coral)}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}.card.pop{border:2px solid var(--coral)}
-.card ul{padding-left:20px;margin:0}.card li{margin:7px 0}.price{font:800 2rem 'Montserrat';margin:6px 0 10px}.price small{font:500 .95rem 'Inter';color:var(--muted)}
-.vid{background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.12)}
-.vid .poster{position:relative;aspect-ratio:16/9}.vid svg{width:100%;height:100%;display:block}
-.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:52px;border-radius:14px;background:#111;display:grid;place-items:center}
-.vid h3{padding:18px 22px;margin:0}
-.yt{background:#111;color:#ffc400}
-.faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
-.face{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:10px;text-align:center}.face svg{width:100%;height:auto;display:block;border-radius:12px}.face small{color:var(--muted)}
-.note{color:var(--muted);font-size:.88rem;margin-top:14px}
-details{border-bottom:1px solid var(--line);padding:16px 0}summary{font-weight:700;cursor:pointer}details p{color:var(--muted);margin:10px 0 0}
-form{display:grid;gap:14px;max-width:560px}label{font-weight:600;display:grid;gap:6px;font-size:.95rem}
-input,select{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink)}
-.ok{display:none;border-radius:12px;padding:14px;font-weight:600}
-.chat{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#ffc400;color:#111;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 22px;box-shadow:0 8px 22px rgba(0,0,0,.3)}
-footer{background:var(--dark);color:#cfc8a8;padding:36px 0}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.burger{display:none}
-@media(max-width:820px){section{padding:52px 0}.burger{display:grid;place-items:center}
-.links{position:absolute;top:68px;left:0;right:0;background:var(--dark);flex-direction:column;align-items:stretch;gap:2px;padding:10px 22px 22px;display:none;box-shadow:0 12px 24px rgba(0,0,0,.35)}
-.links.open{display:flex}.links a{padding:12px 0}.links .btn{text-align:center;margin-top:8px}.links .icon-btn{align-self:flex-start;margin-top:8px}}
-@media(max-width:520px){.progs{grid-template-columns:repeat(2,1fr);gap:12px}.pc .t{padding:12px}.pc b{font-size:.95rem}.head{flex-direction:column;align-items:flex-start}.chat{padding:12px 16px;font-size:.9rem}.hero .in{padding:32px 18px}}
-@media(prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}}
+:root {
+  --primary: #ffc400;
+  --primary-hover: #ffd54f;
+  --primary-glow: rgba(255, 196, 0, 0.4);
+  --bg-dark: #0a0a0c;
+  --bg-darker: #050507;
+  --surface: #141419;
+  --surface-glass: rgba(20, 20, 25, 0.75);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --surface-hover: #1c1c24;
+  --text-main: #f5f5f7;
+  --text-muted: #a1a1aa;
+  --accent-blue: #38bdf8;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #128c7e;
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] {
+  --bg-dark: #f8fafc;
+  --bg-darker: #ffffff;
+  --surface: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  --surface-border: rgba(0, 0, 0, 0.08);
+  --surface-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --primary-glow: rgba(255, 196, 0, 0.25);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAVBAR - Exact Roboclub screenshot layout */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--transition);
+  padding: 20px 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+}
+
+.navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(10, 10, 12, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.logo-badge {
+  color: var(--primary);
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: var(--transition);
+  position: relative;
+  padding: 6px 0;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nav-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-icon-btn.heart-btn.active svg {
+  fill: #ef4444;
+  stroke: #ef4444;
+  animation: heartPop 0.4s ease;
+}
+
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* HERO SECTION - Exact 1:1 Screenshot match */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('/images/hero.jpg') center center/cover no-repeat;
+  color: #ffffff;
+  padding: 120px 20px 80px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 40%, rgba(10,10,12,0.95) 95%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.9);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 400;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 42px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.hero-btn-pill:hover {
+  background: #ffffff;
+  color: #0a0a0c;
+  border-color: #ffffff;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.35);
+}
+
+/* FLOATING WHATSAPP BUTTON - Screenshot exact feature */
+.whatsapp-float {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 999;
+  background: var(--whatsapp);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background: #22bf5b;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #ffffff;
+}
+
+.whatsapp-float svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* SECTION STYLES */
+section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 54px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(255, 196, 0, 0.12);
+  border: 1px solid rgba(255, 196, 0, 0.3);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* PROGRAMS SECTION */
+.programs-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--surface-border);
+  padding: 10px 26px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--primary);
+  color: #0a0a0c;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px var(--primary-glow);
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.program-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 25px rgba(255, 196, 0, 0.2);
+  border-color: rgba(255, 196, 0, 0.5);
+}
+
+.program-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.program-card:hover .program-img {
+  transform: scale(1.08);
+}
+
+.program-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.95) 100%);
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.program-badge-group {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.p-tag {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.p-tag.mode-online {
+  background: rgba(56, 189, 248, 0.85);
+  color: #032b43;
+  border: none;
+}
+
+.p-tag.mode-offline {
+  background: rgba(255, 196, 0, 0.85);
+  color: #2b2000;
+  border: none;
+}
+
+.program-info {
+  position: relative;
+  z-index: 2;
+  padding: 22px;
+  color: #ffffff;
+}
+
+.program-age {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.program-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.program-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.program-card:hover .program-details,
+.program-card:focus-within .program-details {
+  max-height: 120px;
+  opacity: 1;
+  margin-bottom: 12px;
+}
+
+.program-action-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  background: var(--primary);
+  color: #0a0a0c;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.program-card:hover .program-action-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABOUT / PILLARS SECTION */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pillar-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  padding: 30px 24px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 196, 0, 0.4);
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.pillar-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pillar-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* AWARDS SECTION */
+.awards-section {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--surface) 50%, var(--bg-dark) 100%);
+  border-top: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.award-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px var(--primary-glow);
+}
+
+.award-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: rgba(255, 196, 0, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.award-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.award-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* STATS BAR */
+.stats-banner {
+  margin: 60px 0 0;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* LAB SETUP / PRICING */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: 38px 32px;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary);
+  box-shadow: 0 15px 40px rgba(255, 196, 0, 0.2);
+  transform: scale(1.03);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #0a0a0c;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 18px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pricing-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.pricing-price {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--surface-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.pricing-features li svg {
+  width: 18px;
+  height: 18px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.btn-pricing {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pricing-card.featured .btn-pricing, .btn-pricing:hover {
+  background: var(--primary);
+  color: #0a0a0c;
+}
+
+/* FAQ ACCORDION */
+.faq-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-header {
+  padding: 22px 26px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  user-select: none;
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 26px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.faq-item.active {
+  border-color: rgba(255, 196, 0, 0.4);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: var(--primary);
+}
+
+.faq-item.active .faq-body {
+  max-height: 200px;
+  padding: 0 26px 22px;
+}
+
+/* ENROLL / CONTACT FORM */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.contact-info h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.contact-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 600;
+}
+
+.contact-bullets svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: 38px 34px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg-dark);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary);
+  color: #0a0a0c;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form-submit-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+.form-msg {
+  display: none;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  margin-top: 16px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-msg.success {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+.form-msg.error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* SEARCH MODAL */
+.search-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.search-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 600px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px 14px 44px;
+  background: var(--bg-dark);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+}
+
+.search-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--bg-darker);
+  border-top: 1px solid var(--surface-border);
+  padding: 60px 0 30px;
+  color: var(--text-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--surface-border);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pillars-grid, .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing-grid, .awards-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .pricing-card.featured {
+    transform: none;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .mobile-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 12, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+    gap: 16px;
+    border-bottom: 1px solid var(--surface-border);
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillars-grid, .stats-banner {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-btn-pill {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .whatsapp-float span {
+    display: none;
+  }
+  .whatsapp-float {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}
 </style>
 </head>
 <body>
-<nav><div class="wrap">
-<a class="logo" href="#top" aria-label="AI Plus Robotic home"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M10 2h8v8h8v8h-8v8h-8v-8H2v-8h8z" fill="#ffc400"/></svg>AI<i>+</i>Robotic</a>
-<button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
-<div class="links" id="menu"><a href="#programs">Programs</a><a href="#labs">Lab setup</a><a href="#pricing">Fees</a><a href="#faq">FAQs</a><a class="btn" href="#enroll" style="padding:9px 20px">Enroll now</a>
-<button class="icon-btn" id="theme" aria-label="Toggle dark mode">◐</button></div>
-</div></nav>
 
-<main id="top">
-<header class="hero">
-<svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-<defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0a0a"/><stop offset="1" stop-color="#2a2306"/></linearGradient><pattern id="gp" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffc400" stroke-opacity=".12"/></pattern></defs>
-<rect width="1200" height="700" fill="url(#hg)"/><rect width="1200" height="700" fill="url(#gp)"/>
-<g stroke="#ffc400" stroke-opacity=".5" stroke-width="2" fill="none"><path d="M60 120h180l40 40h120M980 100h120l40 40M1000 560h-160l-40-40h-110M120 560h140l30-30"/></g>
-<g fill="#ffc400"><circle class="pulse" cx="400" cy="160" r="8"/><circle class="pulse" cx="1140" cy="140" r="8"/><circle class="pulse" cx="690" cy="520" r="8"/><circle class="pulse" cx="290" cy="530" r="8"/></g>
-<path d="M0 640h1200v60H0z" fill="#000000"/>
-<g transform="translate(60 380)" stroke="#ffd83a" stroke-width="16" stroke-linecap="round" fill="none"><path d="M40 260L110 150 220 190"/><path d="M220 190l30-24m-30 24l30 20" stroke-width="8"/></g><circle cx="170" cy="530" r="16" fill="#ffc400"/>
-<g transform="translate(940 360)"><rect width="150" height="110" rx="26" fill="#ffc400" opacity=".9"/><rect x="20" y="30" width="110" height="46" rx="14" fill="#0a0a0a"/><circle cx="52" cy="53" r="9" fill="#fff3a0"/><circle cx="98" cy="53" r="9" fill="#fff3a0"/><rect x="30" y="118" width="90" height="120" rx="16" fill="#ffc400" opacity=".6"/></g>
-<rect width="1200" height="700" fill="#000000" opacity=".35"/>
-</svg>
-<div class="in"><h1>BUILD THE FUTURE</h1><p>Robotics and AI labs for schools, and hands-on classes for students ages 6–17.</p><a class="pill" href="#enroll">Ready to get started?</a></div>
+<!-- NAVIGATION BAR (Exact Roboclub Screenshot Layout) -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-wrap">
+    <a href="#top" class="logo" aria-label="ROBOCLUB Home">
+      ROBOCLUB<span class="logo-badge">.AI</span>
+    </a>
+
+    <ul class="nav-links" id="navMenu">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#journey">Our Journey</a></li>
+      <li><a href="#alumni">Alumni</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Heart / Wishlist Icon -->
+      <button class="nav-icon-btn heart-btn" id="heartBtn" aria-label="Save to Wishlist" title="Save to Favorites">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      </button>
+
+      <!-- Search Icon (Square Border) -->
+      <button class="nav-icon-btn" id="searchBtn" aria-label="Open Search" title="Search Programs">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION (Screenshot 1:1 match) -->
+<header class="hero" id="top">
+  <div class="hero-content">
+    <h1 class="hero-title">BUILD THE FUTURE</h1>
+    <p class="hero-subtitle">Robotics and AI labs for schools, and hands-on classes for students ages 6–17.</p>
+    <a href="#contact" class="hero-btn-pill">Ready to get Started?</a>
+  </div>
 </header>
 
-<section id="programs" class="wrap">
-<div class="head"><h2>Top Programs</h2><div class="filters" role="group" aria-label="Filter programs"><button class="f" data-f="all" aria-pressed="true">All</button><button class="f" data-f="online" aria-pressed="false">Online</button><button class="f" data-f="offline" aria-pressed="false">Offline</button></div></div>
-<div class="progs" id="progs"></div>
-</section>
+<!-- FLOATING WHATSAPP BUTTON (Screenshot exact feature) -->
+<a href="https://wa.me/919876543210?text=Hi%20Roboclub,%20I%20am%20interested%20in%20robotics%20and%20AI%20programs." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
-<section class="wrap" style="border-top:1px solid var(--line)">
-<div class="center"><h2>Why students need a lab</h2><p class="sub">The gaps we see in classrooms today.</p></div>
-<div class="cols">
-<div class="col"><em>01</em><h3>Only theory, no practice</h3><p>Students read about circuits but rarely build one that works.</p></div>
-<div class="col"><em>02</em><h3>Missing future skills</h3><p>AI, robotics and 3D design are absent from most timetables.</p></div>
-<div class="col"><em>03</em><h3>Passive memorising</h3><p>Personal projects beat rote learning for curiosity and confidence.</p></div>
-<div class="col"><em>04</em><h3>Unprepared for tomorrow</h3><p>Problem-solving and digital fluency start with hands-on practice.</p></div>
-</div>
-<div class="callout"><h3>That's why we created <span>AI Plus Robotic</span></h3><p style="margin:0">We build the lab, train the teachers and teach the students, so every child ships a working project.</p></div>
-</section>
+<main>
 
-<section id="labs" class="wrap" style="border-top:1px solid var(--line)">
-<div class="center"><h2>Lab setup for schools and centres</h2><p class="sub">We plan the room, supply equipment, train teachers and support your first term.</p></div>
-<div class="grid3" style="margin-top:32px">
-<div class="card"><h3>Starter Lab</h3><div class="price">₹1.5L<small> from</small></div><ul><li>20 student robotics kits</li><li>Bench and storage plan</li><li>2-day teacher training</li></ul></div>
-<div class="card pop"><h3>Robotics + AI Lab</h3><div class="price">₹4L<small> from</small></div><ul><li>30 kits and 10 AI workstations</li><li>3D printer and drone corner</li><li>Curriculum, certificates, mentor visits</li></ul></div>
-<div class="card"><h3>Innovation Lab</h3><div class="price">₹9L<small> from</small></div><ul><li>Full makerspace design</li><li>Competition team coaching</li><li>Yearly upgrades and support</li></ul></div>
-</div>
-<p class="note center">Sample prices. Replace them with your own.</p>
-</section>
+  <!-- TOP PROGRAMS SECTION (All 8 photo cards) -->
+  <section id="programs" class="container">
+    <div class="section-head">
+      <span class="section-tag">Hands-On Curriculum</span>
+      <h2 class="section-title">Explore Our Programs</h2>
+      <p class="section-desc">Designed by robotics engineers and educators to prepare kids from age 5 to 17 for the future of AI & Automation.</p>
+    </div>
 
-<section class="wrap" style="border-top:1px solid var(--line)">
-<div class="center"><h2>Watch our students in action</h2><p class="sub">Add your own YouTube videos here.</p><a class="btn yt" href="#enroll">View YouTube channel</a></div>
-<div class="grid3" style="margin-top:32px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-<div class="vid"><div class="poster"><svg viewBox="0 0 320 180" role="img" aria-label="Video poster: students building a robot"><rect width="320" height="180" fill="#2a2306"/><rect y="130" width="320" height="50" fill="#0a0a0a"/><path d="M70 130l40-50 50 20" stroke="#ffd83a" stroke-width="12" stroke-linecap="round" fill="none"/><rect x="200" y="86" width="60" height="44" rx="10" fill="#ffc400"/><circle cx="216" cy="138" r="8" fill="#fff"/><circle cx="246" cy="138" r="8" fill="#fff"/></svg><div class="play"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M7 4l16 9-16 9z" fill="#fff"/></svg></div></div><h3>Hands-on robotics workshop</h3></div>
-<div class="vid"><div class="poster"><svg viewBox="0 0 320 180" role="img" aria-label="Video poster: AI project demo"><rect width="320" height="180" fill="#2a2306"/><g stroke="#fff3a0" stroke-width="2"><path d="M60 50l80 40M60 130l80-40M140 90l100-40M140 90l100 40"/></g><g fill="#ffc400"><circle cx="60" cy="50" r="10"/><circle cx="60" cy="130" r="10"/><circle cx="140" cy="90" r="12"/><circle cx="240" cy="50" r="10"/><circle cx="240" cy="130" r="10"/></g></svg><div class="play"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M7 4l16 9-16 9z" fill="#fff"/></svg></div></div><h3>Live AI project demo</h3></div>
-</div>
-</section>
+    <div class="programs-filter" role="group" aria-label="Program filters">
+      <button class="filter-btn active" data-filter="all">All Programs</button>
+      <button class="filter-btn" data-filter="online">Online Live</button>
+      <button class="filter-btn" data-filter="offline">School / Lab (Offline)</button>
+    </div>
 
-<section id="kids" class="wrap" style="border-top:1px solid var(--line)">
-<div class="center"><h2>Our young makers</h2></div>
-<div class="faces" id="faces" style="margin-top:28px"></div>
-<p class="note center">Illustrated avatars drawn in your browser, not photos of real children. Use real photos only with parental consent.</p>
-</section>
+    <div class="programs-grid" id="programsGrid">
+      
+      <!-- Card 1: ML with AI -->
+      <article class="program-card" data-mode="online">
+        <img src="/images/program-1.jpg" alt="Machine Learning with AI" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-online">Online</span>
+          <span class="p-tag">Ages 8–12</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Beginner to Intermediate</span>
+          <h3 class="program-title">Machine Learning with AI</h3>
+          <div class="program-details">
+            Train vision models that recognize images, detect gestures, and power smart mini-bots.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
 
-<section id="pricing" class="wrap" style="border-top:1px solid var(--line)">
-<div class="center"><h2>Student fees</h2></div>
-<div class="grid3" style="margin-top:28px">
-<div class="card"><h3>Level 1 Robotics</h3><div class="price">₹6,000<small> / level</small></div><ul><li>15 live days</li><li>Certificate of completion</li></ul></div>
-<div class="card pop"><h3>Level 2 Robotics</h3><div class="price">₹6,750<small> / level</small></div><ul><li>Autonomous robots</li><li>Portfolio review</li></ul></div>
-<div class="card"><h3>Level 3 and AI</h3><div class="price">₹7,500<small> / level</small></div><ul><li>AI and IoT project</li><li>Competition guidance</li></ul></div>
-</div>
-<p class="note center">Sample fees. Kit cost is separate.</p>
-</section>
+      <!-- Card 2: Scratch Jr. Coding -->
+      <article class="program-card" data-mode="online">
+        <img src="/images/program-2.jpg" alt="Scratch Jr. Coding" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-online">Online</span>
+          <span class="p-tag">Ages 5–7</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Early Learners</span>
+          <h3 class="program-title">Scratch Jr. Block Coding</h3>
+          <div class="program-details">
+            Interactive visual block-coding stories, fun mini-games, and algorithmic thinking for young minds.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
 
-<section id="faq" class="wrap" style="border-top:1px solid var(--line)">
-<h2>Frequently asked questions</h2>
-<details><summary>Do students need coding experience?</summary><p>No. Programs start from zero with block coding and simple electronics.</p></details>
-<details><summary>Can a school run the lab without its own experts?</summary><p>Yes. We train your teachers and send mentors during the first term.</p></details>
-<details><summary>Are classes online or offline?</summary><p>Both. Online classes use a kit sent to your home; offline classes run in a lab.</p></details>
-<details><summary>Is there a free demo class?</summary><p>Yes. Use the form below to book one.</p></details>
-</section>
+      <!-- Card 3: Raspberry Pi -->
+      <article class="program-card" data-mode="offline">
+        <img src="/images/program-3.jpg" alt="Raspberry Pi & Python" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-offline">Offline Lab</span>
+          <span class="p-tag">Ages 13+</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Advanced</span>
+          <h3 class="program-title">Raspberry Pi & Python</h3>
+          <div class="program-details">
+            Build full mini-computers, write Python scripts, interface sensors, and create IoT automation hubs.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
 
-<section id="enroll" class="wrap" style="border-top:1px solid var(--line)">
-<h2>Talk to AI Plus Robotic</h2>
-<form id="form" novalidate>
-<label>Your name<input name="parent" required autocomplete="name"></label>
-<label>Phone or WhatsApp<input name="phone" type="tel" required autocomplete="tel"></label>
-<label>Email<input name="email" type="email" required autocomplete="email"></label>
-<input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-<label>I am interested in<select name="interest"><option>Setting up a lab</option><option>Robotics classes</option><option>AI classes</option></select></label>
-<label>Message (optional)<textarea name="message" rows="3" maxlength="1000" style="font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink)"></textarea></label>
-<button class="btn" type="submit" id="send">Send enquiry</button>
-<div class="ok" id="ok" role="status"></div>
-</form>
-<p class="note">Your details are used only to reply to your enquiry.</p>
-</section>
+      <!-- Card 4: 3D Doodling -->
+      <article class="program-card" data-mode="offline">
+        <img src="/images/program-4.jpg" alt="3D Doodling & Spatial Design" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-offline">Offline Lab</span>
+          <span class="p-tag">Ages 7+</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Maker Series</span>
+          <h3 class="program-title">3D Doodling & Spatial Design</h3>
+          <div class="program-details">
+            Draw in 3D space with high-precision filament pens to build architectural structures and prototypes.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 5: 3D Design & Printing -->
+      <article class="program-card" data-mode="offline">
+        <img src="/images/program-5.jpg" alt="3D Design & Printing" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-offline">Offline Lab</span>
+          <span class="p-tag">Ages 10+</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">CAD & Rapid Prototyping</span>
+          <h3 class="program-title">3D Design & 3D Printing</h3>
+          <div class="program-details">
+            Master Autodesk CAD modeling, slicing algorithms, and manufacture custom robot chassis on 3D printers.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 6: Arduino & Electronics -->
+      <article class="program-card" data-mode="online">
+        <img src="/images/program-6.jpg" alt="Arduino Uno & Microcontrollers" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-online">Online / Kit</span>
+          <span class="p-tag">Ages 11+</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Hardware Programming</span>
+          <h3 class="program-title">Arduino & Microcontrollers</h3>
+          <div class="program-details">
+            Wire breadboards, program C++ microcontrollers, read ultrasonic sensors, and drive DC servo motors.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 7: Fun with Circuits -->
+      <article class="program-card" data-mode="offline">
+        <img src="/images/program-7.jpg" alt="Fun with Snap Circuits" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-offline">Offline Lab</span>
+          <span class="p-tag">Ages 8–11</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">STEM Basics</span>
+          <h3 class="program-title">Fun with Snap Circuits</h3>
+          <div class="program-details">
+            Explore electricity, spinning fans, buzzer alarms, and multimeter measurements with modular snap kits.
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
+
+      <!-- Card 8: Robotics & Competition -->
+      <article class="program-card" data-mode="offline">
+        <img src="/images/program-8.jpg" alt="Robotics & Competition" class="program-img" loading="lazy">
+        <div class="program-overlay"></div>
+        <div class="program-badge-group">
+          <span class="p-tag mode-offline">Offline Lab</span>
+          <span class="p-tag">Ages 11–17</span>
+        </div>
+        <div class="program-info">
+          <span class="program-age">Championship Track</span>
+          <h3 class="program-title">Robotics & Programming</h3>
+          <div class="program-details">
+            Team-based combat & sumo robotics, autonomous navigation, and coaching for national Olympiads (WRO / FLL).
+          </div>
+          <a href="#contact" class="program-action-btn">Book Free Demo</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT US / WHY LAB SECTION -->
+  <section id="about" class="container">
+    <div class="section-head">
+      <span class="section-tag">Why Roboclub</span>
+      <h2 class="section-title">Bridging The Classroom Gap</h2>
+      <p class="section-desc">Traditional schools teach theory. We build hands-on innovation ecosystems where children create working technology.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-num">01</div>
+        <h3>From Theory to Build</h3>
+        <p>Instead of just reading about circuits, students assemble real breadboards, wire LEDs, and flash firmware.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">02</div>
+        <h3>AI & Next-Gen Skills</h3>
+        <p>Equipping students early with computer vision, machine learning models, and CAD design capabilities.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">03</div>
+        <h3>Active Project-Based Learning</h3>
+        <p>Every single module ends with an autonomous project that students test, showcase, and add to their STEM portfolio.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">04</div>
+        <h3>Competition Mentorship</h3>
+        <p>Hands-on coaching for national & international leagues including FIRST Lego League, WRO, and RoboFest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS & RECOGNITION SECTION -->
+  <section id="awards" class="awards-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Excellence</span>
+        <h2 class="section-title">Awards & Milestones</h2>
+        <p class="section-desc">Our students consistently win top honors across international and national robotics tournaments.</p>
+      </div>
+
+      <div class="awards-grid">
+        <div class="award-card">
+          <div class="award-icon">🏆</div>
+          <h3>WRO National Champions</h3>
+          <p>Gold medal in the Autonomous Sumo category at World Robot Olympiad regional & national finals.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <h3>FLL Innovation Award</h3>
+          <p>Recognized for exceptional engineering and AI-driven assistive robotics solution for community impact.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-icon">🌟</div>
+          <h3>Best STEM Curriculum 2025</h3>
+          <p>Awarded top robotics and experiential learning partner across 45+ premier partner schools.</p>
+        </div>
+      </div>
+
+      <!-- Stats counter -->
+      <div class="stats-banner" id="journey">
+        <div class="stat-item">
+          <h4>50+</h4>
+          <p>School Labs Established</p>
+        </div>
+        <div class="stat-item">
+          <h4>15,000+</h4>
+          <p>Students Trained</p>
+        </div>
+        <div class="stat-item">
+          <h4>120+</h4>
+          <p>Competition Trophies</p>
+        </div>
+        <div class="stat-item">
+          <h4>98.7%</h4>
+          <p>Parent Satisfaction Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAB SETUP PACKAGES -->
+  <section id="labs" class="container">
+    <div class="section-head">
+      <span class="section-tag">School Partnerships</span>
+      <h2 class="section-title">Turnkey Robotics & AI Labs</h2>
+      <p class="section-desc">We design the space, supply certified kits, train teachers, and deliver curriculum for an entire academic year.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Starter Lab -->
+      <div class="pricing-card">
+        <h3 class="pricing-title">Starter Lab</h3>
+        <div class="pricing-price">₹1.5L <span>/ setup</span></div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 20 Student Robotics & Circuit Kits</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Bench & Organized Storage Layout</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 2-Day Faculty Certification Workshop</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Grade 3–7 Foundation Curriculum</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Request Lab Quote</a>
+      </div>
+
+      <!-- Advanced AI Lab -->
+      <div class="pricing-card featured">
+        <span class="pricing-badge">Most Popular</span>
+        <h3 class="pricing-title">Robotics + AI Lab</h3>
+        <div class="pricing-price">₹4.0L <span>/ setup</span></div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 35 Advanced Kits + 10 AI Microcomputers</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 3D Printer + Drone Maker Corner</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Regular Monthly Master Mentor Visits</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Full Grades 3–12 STEM Certification</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Get Custom Plan</a>
+      </div>
+
+      <!-- Innovation Center -->
+      <div class="pricing-card">
+        <h3 class="pricing-title">Innovation Center</h3>
+        <div class="pricing-price">₹9.0L <span>/ setup</span></div>
+        <ul class="pricing-features">
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Complete Makerspace & VR Simulator Area</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Dedicated Competition Team Coaching</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Yearly Hardware Upgrades & Replacement</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Direct University Placement Support</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Contact Enterprise Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALUMNI / YOUNG MAKERS SHOWCASE -->
+  <section id="alumni" class="container">
+    <div class="section-head">
+      <span class="section-tag">Student Showcase</span>
+      <h2 class="section-title">Meet Our Young Makers</h2>
+      <p class="section-desc">Projects built from scratch by our students during their robotic and AI learning tracks.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-num">🤖</div>
+        <h3>Autonomous Maze Solver</h3>
+        <p>Built by <strong>Aanya (Age 10)</strong> using ultrasonic range sensors and proportional feedback algorithms.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">👁️</div>
+        <h3>AI Plant Health Classifier</h3>
+        <p>Created by <strong>Arjun (Age 13)</strong> using lightweight Convolutional Neural Networks on Raspberry Pi.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">🎮</div>
+        <h3>Gesture Combat Bot</h3>
+        <p>Engineered by <strong>Vihaan (Age 12)</strong> with accelerometer wristbands and 2.4GHz RF transceivers.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-num">🖨️</div>
+        <h3>Custom Modular Robotic Arm</h3>
+        <p>3D-modeled in CAD & printed by <strong>Meera (Age 14)</strong> with 4-DOF servo precision control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="container">
+    <div class="section-head">
+      <span class="section-tag">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-item active">
+        <div class="faq-header">
+          <span>Do students require any prior coding or electronics experience?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          No prior experience is necessary! Our curriculum is carefully tiered. Younger learners start with block coding (Scratch Jr.) and snap circuits before progressing to Python, C++, and hardware schematics.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Can a school operate the lab without hiring full-time AI experts?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          Absolutely. We train your existing science and computer teachers with our structured pedagogical modules, provide detailed lesson plans, and dispatch our master mentors for regular support.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Are the kits included for online courses?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          Yes! When you enroll in any of our online live courses, a complete hardware kit containing all components, boards, and sensors is delivered straight to your doorstep before the first class.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-header">
+          <span>Can we book a free demonstration session?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          Yes! You can fill out the enquiry form below or click the WhatsApp button to book a personalized 1-on-1 demo session with our lead robotics educators.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & ENROLLMENT FORM -->
+  <section id="contact" class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Get In Touch</span>
+        <h3>Ready to Build The Future?</h3>
+        <p>Whether you want to setup a robotic lab at your school or enroll your child in an upcoming cohort, our team is here to assist you.</p>
+        
+        <ul class="contact-bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 98765 43210 / WhatsApp Support
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contact@aiplusrobotic.com
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Robotics Hub, Tech Park, New Delhi, India
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <form id="enquiryForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="Parent or School Representative">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required placeholder="+91 98765 43210">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="your.email@example.com">
+          </div>
+
+          <!-- Honeypot anti-spam field -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px;">
+
+          <div class="form-group">
+            <label for="interest">Interested In</label>
+            <select id="interest" name="interest" class="form-select">
+              <option value="Setting up a lab">Setting up a School Lab</option>
+              <option value="Robotics classes">Student Robotics Classes</option>
+              <option value="AI classes">AI & Machine Learning Cohort</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" class="form-textarea" rows="3" placeholder="Tell us about your student's age or school requirements..."></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="form-submit-btn">Send Enquiry</button>
+          <div id="formMsg" class="form-msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </main>
-<a class="chat" href="#enroll">Chat and book demo</a>
-<footer><div class="wrap"><span>© 2026 AI Plus Robotic</span><span>Robotics and AI labs and classes</span></div></footer>
+
+<!-- SEARCH MODAL -->
+<div class="search-modal" id="searchModal">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search programs (e.g. AI, Arduino, 3D, Python)...">
+      <button class="search-close-btn" id="searchClose">✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>ROBOCLUB<span style="color:var(--primary)">.AI</span></h3>
+        <p>AI Plus Robotic empowers the next generation of engineers, creators, and innovators with experiential robotics & AI labs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#labs">Lab Setup</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul class="footer-links">
+          <li><a href="#programs">Machine Learning</a></li>
+          <li><a href="#programs">Arduino Robotics</a></li>
+          <li><a href="#programs">Raspberry Pi IoT</a></li>
+          <li><a href="#programs">3D CAD & Printing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/919876543210" target="_blank">WhatsApp</a></li>
+          <li><a href="#contact">Book Free Demo</a></li>
+          <li><a href="#contact">School Inquiry</a></li>
+          <li><a href="/healthz" target="_blank">System Health</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 ROBOCLUB | AI Plus Robotic. All rights reserved.</p>
+      <p>Built with ❤️ for young innovators.</p>
+    </div>
+  </div>
+</footer>
 
 <script>
-var C=[['#b38600','#1a1400'],['#111','#4d3f00'],['#9a7400','#0a0a0a'],['#222','#6b5500'],['#a87b00','#150f00'],['#0a0a0a','#5c4700'],['#8c6a00','#0a0a0a'],['#1c1c1c','#7a6000']];
-var I=[
-'<g stroke="#fff" stroke-width="3"><path d="M50 90l50-30 50 30M50 90l50 30 50-30M100 60v60"/></g><g fill="#fff"><circle cx="50" cy="90" r="9"/><circle cx="100" cy="60" r="9"/><circle cx="100" cy="120" r="9"/><circle cx="150" cy="90" r="9"/></g>',
-'<g fill="#fff"><rect x="60" y="50" width="80" height="26" rx="6"/><rect x="70" y="82" width="80" height="26" rx="6" opacity=".8"/><rect x="60" y="114" width="80" height="26" rx="6" opacity=".6"/></g>',
-'<rect x="60" y="60" width="80" height="80" rx="10" fill="#fff"/><rect x="80" y="80" width="40" height="40" rx="6" fill="#111"/><g stroke="#fff" stroke-width="5"><path d="M75 50v10M100 50v10M125 50v10M75 140v10M100 140v10M125 140v10M50 75h10M50 100h10M50 125h10M140 75h10M140 100h10M140 125h10"/></g>',
-'<path d="M60 130l20-60 20 40 20-40 20 60" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/><path d="M130 50l30-18" stroke="#fff" stroke-width="10" stroke-linecap="round"/>',
-'<path d="M100 50l50 28v56l-50 28-50-28V78z" fill="#fff" opacity=".9"/><path d="M100 106l50-28M100 106v56M100 106L50 78" stroke="#111" stroke-width="4" fill="none"/>',
-'<rect x="45" y="70" width="110" height="70" rx="8" fill="#fff"/><g fill="#111"><circle cx="65" cy="90" r="6"/><circle cx="65" cy="120" r="6"/><rect x="90" y="88" width="45" height="30" rx="4"/></g><path d="M60 155q40 20 80 0" stroke="#ffd83a" stroke-width="5" fill="none"/>',
-'<circle cx="100" cy="90" r="30" fill="none" stroke="#fff" stroke-width="7"/><path d="M90 120h20v22H90zM100 60V40M60 90H40M140 90h20" stroke="#fff" stroke-width="7"/><path d="M92 96l8-16 8 16" fill="none" stroke="#ffd83a" stroke-width="4"/>',
-'<rect x="55" y="55" width="90" height="70" rx="20" fill="#fff"/><circle cx="82" cy="88" r="9" fill="#111"/><circle cx="118" cy="88" r="9" fill="#111"/><path d="M100 55V38" stroke="#fff" stroke-width="6"/><circle cx="100" cy="34" r="7" fill="#ffd83a"/><rect x="72" y="132" width="56" height="30" rx="8" fill="#fff" opacity=".8"/>'];
-var D=[["Machine Learning with AI","8–12 yrs","Train models that recognise images and gestures.","online"],["Scratch Jr.","5–7 yrs","Block-coding stories and games for little learners.","online"],["Raspberry Pi","13+ yrs","Build a mini computer project with Python.","offline"],["3D Doodling","7+ yrs","Draw in the air with a 3D pen and make models.","offline"],["3D Design and Printing","10+ yrs","Design in CAD and print your own parts.","offline"],["Arduino","11+ yrs","Wire, code and control sensors and motors.","online"],["Fun with Circuits","8–11 yrs","Snap circuits that light, spin and buzz.","offline"],["Robotics and Programming","11–17 yrs","Build and program a robot from the ground up.","online"]];
-var pg=document.getElementById('progs');
-pg.innerHTML=D.map(function(d,i){var c=C[i];return '<article class="pc" data-m="'+d[3]+'"><svg viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="g'+i+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><rect width="200" height="267" fill="url(#g'+i+')"/><g transform="translate(0 20)">'+I[i]+'</g></svg><div class="t"><small>'+d[1]+'</small><b>'+d[0]+'</b></div><p>'+d[2]+' <br><br><b>Book a free demo</b></p><a href="#enroll" aria-label="'+d[0]+', book a free demo"></a></article>'}).join('');
-document.querySelectorAll('.f').forEach(function(b){b.onclick=function(){document.querySelectorAll('.f').forEach(function(x){x.setAttribute('aria-pressed',x==b)});pg.querySelectorAll('.pc').forEach(function(c){c.style.display=(b.dataset.f=='all'||c.dataset.m==b.dataset.f)?'':'none'})}});
+// Navbar background on scroll
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('navbar');
+  if (window.scrollY > 40) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
 
-var skins=['#f1c9a5','#e0a878','#c68642','#8d5524','#f6d5bd','#a86b3c'],hairs=['#1b1b1b','#3b2417','#6b3e1f','#c1782b','#2a2a3a'],bgs=['#fff1b8','#ffe08a','#f5f0d8','#ffd966','#fdf6cf','#ffe9a0'];
-var kids=[["Aanya",9,"line-follower bot"],["Vihaan",12,"gesture-controlled car"],["Meera",14,"plant disease detector"],["Kabir",10,"walking robot"],["Zoya",11,"voice assistant"],["Arjun",13,"maze solver"]];
-function face(s){var sk=skins[s%6],h=hairs[(s*2+1)%5],g=s%3==1,girl=s%2==0,bg=bgs[s%6];
-var hair=girl?'<path d="M28 70Q28 24 70 24Q112 24 112 70L112 104Q104 108 100 88Q70 76 40 88Q36 108 28 104Z" fill="'+h+'"/>':'<path d="M30 66Q30 26 70 26Q110 26 110 66Q90 48 70 50Q50 48 30 66Z" fill="'+h+'"/>';
-return '<svg viewBox="0 0 140 140" role="img" aria-label="Illustrated student avatar"><rect width="140" height="140" fill="'+bg+'"/><path d="M20 140Q22 112 70 112Q118 112 120 140Z" fill="'+(s%2?'#ffc400':'#0a0a0a')+'"/><rect x="60" y="98" width="20" height="18" fill="'+sk+'"/>'+(girl?hair:'')+'<ellipse cx="70" cy="70" rx="34" ry="38" fill="'+sk+'"/>'+(girl?'':hair)+(girl?'<path d="M38 60Q70 34 102 60Q80 50 38 60Z" fill="'+h+'"/>':'')+'<circle cx="57" cy="72" r="4.5" fill="#111111"/><circle cx="83" cy="72" r="4.5" fill="#111111"/><circle cx="58.5" cy="70.5" r="1.4" fill="#fff"/><circle cx="84.5" cy="70.5" r="1.4" fill="#fff"/><circle cx="48" cy="84" r="5" fill="#e8756a" opacity=".3"/><circle cx="92" cy="84" r="5" fill="#e8756a" opacity=".3"/><path d="M60 88Q70 98 80 88" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round"/>'+(g?'<g fill="none" stroke="#111111" stroke-width="2.5"><circle cx="57" cy="72" r="10"/><circle cx="83" cy="72" r="10"/><path d="M67 72h6"/></g>':'')+'</svg>'}
-document.getElementById('faces').innerHTML=kids.map(function(k,i){return '<div class="face">'+face(i+2)+'<b>'+k[0]+', '+k[1]+'</b><br><small>Built a '+k[2]+'</small></div>'}).join('');
-document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var f=e.target,ok=document.getElementById('ok'),btn=document.getElementById('send');
-function show(m,good){ok.style.display='block';ok.style.background=good?'var(--soft)':'#fde2df';ok.style.color=good?'var(--ink)':'#7a1c12';ok.textContent=m}
-if(!f.parent.value.trim()||!/^[0-9+\-\s]{8,}$/.test(f.phone.value)||!/\S+@\S+\.\S+/.test(f.email.value)){show('Enter your name, a valid phone number and a valid email.',false);return}
-btn.disabled=true;btn.textContent='Sending...';
-fetch('/api/enquiries',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:f.parent.value,phone:f.phone.value,email:f.email.value,interest:f.interest.value,message:f.message.value,website:f.website.value})})
-.then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j}})})
-.then(function(x){if(x.ok){show('Thanks, '+f.parent.value.trim()+'. We will contact you within 24 hours.',true);f.reset()}else show(x.j.error||'Something went wrong. Please try again.',false)})
-.catch(function(){show('Could not reach the server. Please try again or call us.',false)})
-.finally(function(){btn.disabled=false;btn.textContent='Send enquiry'})});
-var bg=document.getElementById('burger'),mn=document.getElementById('menu');
-bg.onclick=function(){var o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};
-mn.addEventListener('click',function(e){if(e.target.tagName=='A'){mn.classList.remove('open');bg.setAttribute('aria-expanded',false);bg.textContent='☰'}});
-var r=document.documentElement;document.getElementById('theme').onclick=function(){var d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+// Mobile menu toggle
+var mobileToggle = document.getElementById('mobileToggle');
+var navMenu = document.getElementById('navMenu');
+mobileToggle.addEventListener('click', function() {
+  navMenu.classList.toggle('open');
+});
+navMenu.querySelectorAll('a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    navMenu.classList.remove('open');
+  });
+});
+
+// Heart wishlist button interaction
+var heartBtn = document.getElementById('heartBtn');
+heartBtn.addEventListener('click', function() {
+  this.classList.toggle('active');
+  if (this.classList.contains('active')) {
+    this.setAttribute('title', 'Added to Favorites');
+  } else {
+    this.setAttribute('title', 'Save to Favorites');
+  }
+});
+
+// Search modal toggle and live filter
+var searchBtn = document.getElementById('searchBtn');
+var searchModal = document.getElementById('searchModal');
+var searchClose = document.getElementById('searchClose');
+var searchInput = document.getElementById('searchInput');
+
+searchBtn.addEventListener('click', function() {
+  searchModal.classList.add('active');
+  searchInput.focus();
+});
+
+searchClose.addEventListener('click', function() {
+  searchModal.classList.remove('active');
+});
+
+searchModal.addEventListener('click', function(e) {
+  if (e.target === searchModal) {
+    searchModal.classList.remove('active');
+  }
+});
+
+searchInput.addEventListener('input', function() {
+  var term = this.value.toLowerCase().trim();
+  var cards = document.querySelectorAll('.program-card');
+  cards.forEach(function(card) {
+    var text = card.textContent.toLowerCase();
+    if (!term || text.includes(term)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+// Programs filter buttons
+var filterBtns = document.querySelectorAll('.filter-btn');
+var programCards = document.querySelectorAll('.program-card');
+filterBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    filterBtns.forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.dataset.filter;
+    programCards.forEach(function(card) {
+      if (filter === 'all' || card.dataset.mode === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// FAQ Accordion
+var faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(function(item) {
+  var header = item.querySelector('.faq-header');
+  header.addEventListener('click', function() {
+    var wasActive = item.classList.contains('active');
+    faqItems.forEach(function(i) { i.classList.remove('active'); });
+    if (!wasActive) {
+      item.classList.add('active');
+    }
+  });
+});
+
+// Enquiry Form AJAX Submission
+var form = document.getElementById('enquiryForm');
+var formMsg = document.getElementById('formMsg');
+var submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = form.name.value.trim();
+  var phone = form.phone.value.trim();
+  var email = form.email.value.trim();
+  var interest = form.interest.value;
+  var message = form.message.value.trim();
+  var website = form.website.value;
+
+  function displayMsg(msg, isSuccess) {
+    formMsg.style.display = 'block';
+    formMsg.className = 'form-msg ' + (isSuccess ? 'success' : 'error');
+    formMsg.textContent = msg;
+  }
+
+  if (!name || !phone || !email) {
+    displayMsg('Please enter your name, phone number, and email address.', false);
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  fetch('/api/enquiries', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      phone: phone,
+      email: email,
+      interest: interest,
+      message: message,
+      website: website
+    })
+  })
+  .then(function(res) {
+    return res.json().then(function(data) {
+      return { ok: res.ok, data: data };
+    });
+  })
+  .then(function(result) {
+    if (result.ok) {
+      displayMsg('Thank you, ' + name + '! Your enquiry has been received. Our team will contact you shortly.', true);
+      form.reset();
+    } else {
+      displayMsg(result.data.error || 'Unable to submit enquiry. Please try again.', false);
+    }
+  })
+  .catch(function(err) {
+    displayMsg('Network error. Please try again or reach out on WhatsApp.', false);
+  })
+  .finally(function() {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Enquiry';
+  });
+});
 </script>
+
 </body>
 </html>
